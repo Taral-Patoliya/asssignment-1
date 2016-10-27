@@ -181,11 +181,11 @@ def is_end_of_world(cities):
 
 def time_to_end_of_world(p_spread,p_cure):
     my_world = set_up_cities()
-    zombify(my_world,0)
+    my_world = zombify(my_world,0)
     end_of_world_conter = 0
     while(not is_end_of_world(my_world)):
-        #sim_step(my_world,p_spread,p_cure)
-        sim_step(my_world,0.5,0.0)
+        my_world = sim_step(my_world,p_spread,p_cure)
+        #sim_step(my_world,0.5,0.0)
         end_of_world_conter=end_of_world_conter+1
 
     return  end_of_world_conter

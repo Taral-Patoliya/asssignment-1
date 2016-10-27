@@ -207,3 +207,4 @@ my_world = set_up_cities()
 my_world = zombify(my_world,2)
 end_of_world = time_to_end_of_world(0.5,0,0)
 
+print end_of_world

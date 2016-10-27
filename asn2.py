@@ -74,6 +74,8 @@ def set_up_cities(names=['City 0', 'City 1', 'City 2', 'City 3', 'City 4', 'City
     # Add each city to the list
     city_list = []
     for n in enumerate(names):
+        """n[0] = 0,1,2,3,4 etc."""
+        """n[0] = Name of the city."""
         city_list += [ make_city(n[1],con[n[0]]) ]
 
     return city_list

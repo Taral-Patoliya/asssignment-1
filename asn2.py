@@ -148,6 +148,14 @@ def print_world(world):
 #### Put *your* code after this comment.
 
 def zombify(cities,cityno):
+    """
+    city[0] = "Name Of the city"
+    city[1] = "Name of the city"
+    city[2] = "List of the connected cities"
+
+    So if cityno = 2
+    Then city = cities[2];
+    """
     cities[cityno][1]=True
     return cities
 

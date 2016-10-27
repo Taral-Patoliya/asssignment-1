@@ -150,7 +150,7 @@ def print_world(world):
 def zombify(cities,cityno):
     """
     city[0] = "Name Of the city"
-    city[1] = "Name of the city"
+    city[1] = "Is Infected"
     city[2] = "List of the connected cities"
 
     So if cityno = 2

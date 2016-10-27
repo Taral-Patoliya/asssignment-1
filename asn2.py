@@ -192,9 +192,9 @@ def time_to_end_of_world(p_spread,p_cure):
 
 def end_world_many_times(n,p_spread,p_cure):
     list_times =[]
-    cntr = 1
-    while(cntr != n):
-        list_times[cntr-1] = time_to_end_of_world(p_spread,p_cure)
+    cntr = 0
+    while(cntr < n):
+        list_times[cntr] = time_to_end_of_world(p_spread,p_cure)
         cntr+=1
 
     return list_times

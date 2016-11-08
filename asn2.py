@@ -194,17 +194,45 @@ def end_world_many_times(n,p_spread,p_cure):
     list_times =[]
     cntr = 0
     while(cntr < n):
-        list_times[cntr] = time_to_end_of_world(p_spread,p_cure)
+        list_times+= [time_to_end_of_world(p_spread,p_cure)]
         cntr+=1
-
     return list_times
 
 
 
 
+import numpy as np
+import matplotlib.mlab as mlab
+import matplotlib.pyplot as plt
 
+mu, sigma = 100, 15
+
+# the histogram of the data
+
+
+# add a 'best fit' line
+
+
+
+"""
 my_world = set_up_cities()
+draw_world(my_world)
 my_world = zombify(my_world,2)
+draw_world(my_world)
+my_world = sim_step(my_world,0.9,0.0)
+draw_world(my_world)
 end_of_world = time_to_end_of_world(0.5,0.0)
+"""
+data = end_world_many_times(20,0.9,0.5)
+n, bins, patches = plt.hist(data, 50, normed=1, facecolor='green', alpha=0.75)
+y = mlab.normpdf( bins, mu, sigma)
+l = plt.plot(bins, y, 'r--', linewidth=1)
 
-print end_of_world
+plt.xlabel('Smarts')
+plt.ylabel('Probability')
+plt.title(r'$\mathrm{Histogram\ of\ IQ:}\ \mu=100,\ \sigma=15$')
+plt.axis([data[0],data[len(data),0,1000])
+plt.grid(True)
+
+plt.show()
+

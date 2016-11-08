@@ -32,13 +32,14 @@ def writeCsv(data):
         writer  = csv.DictWriter(csvFile,fieldNames)
         writer.writeheader()
         for row in data:
-            #Some problem with data being written in csv#
+            #Some problem with data being written in csv`#
             writable = dict(zip(fieldNames,row))
             writer.writerow(writable)
 
 def correctDate(row):
     import datetime
     #Need to correct the date by comparing the date column from row and todays date#
+    #check http://stackoverflow.com/questions/2217488/age-from-birthdate-in-python#
     return row
 
 data = [["#","NAME","POSITION","AGE","HEIGHT","WEIGHT","BIRTHDAY"]]
